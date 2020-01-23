@@ -7,20 +7,23 @@ python3 lime.py --time [measurement time in seconds] --samprate [sampling rate i
 
 example: 
 
-python3 lime.py --time 1 --samprate 31.25e5 --bw 6e6 --channel 1 2  --filename test12.bin test22.bin 
+ python3 lime.py --time 1 --center 244e6 --samprate 31.25e5 --bw 6e6 --channel 1 2 --filename test12.bin test22.bin
 
 Here are my installation history entries from oldest to newest
+
 sudo add-apt-repository -y ppa:myriadrf/drivers
 
 sudo apt-get update
 
-sudo apt-get install libboost-all-dev swig
+sudo apt-get install python3-numpy python3-scipy soapysdr-tools python3-soapysdr
+
+sudo apt-get install python-dev swig
+
+sudo apt-get install soapysdr-module-lms7
+
+sudo apt-get install libsoapysdr-dev
 
 sudo apt-get install limesuite liblimesuite-dev limesuite-udev limesuite-images
-
-sudo apt-get install soapysdr-tools soapysdr-module-lms7
-
-sudo apt-get install soapysdr
 
 SoapySDRUtil --info  for checking if everything correct
 
